@@ -1,0 +1,331 @@
+
+/===================dash/stoplisting Folder ===============
+
+
+/===================dash/stoplisting/admin Folder ===============
+	Location: dash/stoplisting/admin 
+	Purpose: holds the admin panel files
+	--
+
+	
+		Location: dash/stoplisting/admin/ckeditor, Location: dash/admin/stoplisting/ckfinder
+		Purpose: used for the WYSIWYG EDITOR. PRoblem is that there is a copy of this in the dash/stoplisting folder of each ck folder. Both should be merged.
+		--
+		//================dash/stoplisting/admin/classes======
+			Location: dash/stoplisting/admin/classes/db_queries.php
+			Purpose: Holds several functions, such as addItem to ebay. (Swank operator should be removed, and instead the api should be used.)
+			--
+			
+			Location: dash/stoplisting/admin/classes/sql_queries.php
+			Purpose: functions to retrieve some data from a database.
+			--
+		//================dash/stoplisting/admin/image-resize-master======
+		Purpose: To Resize or to Rotate images (there is timthumb used on this website also, but this one is resizing on the fly with no image save)
+			
+			Location: dash/stoplisting/admin/image-resize-master/getImage.php
+			Purpose: resizes images without saving the image. (if there were user caching, it would be alot better)
+			--
+			
+			Location: dash/stoplisting/admin/image-resize-master/rotateImage.php
+			Purpose: rotates saved image, and saves the rotation as the replacement image.
+			--
+		
+
+		//================dash/stoplisting/admin/inc======
+		sidebar.php, header.php, pagination.php - self explanitory
+		
+		//================dash/stoplisting/admin/model & dash/stoplisting/admin/views ======
+		
+		These are two sides of the same coin, so i will explain them based on their names:
+		File					
+		----------------------------------------
+		add_cat.php  			- Purpose:
+		add_client.php  		- Purpose:
+		add_package.php  		- Purpose:
+		add_template.php  		- Purpose:
+		assign_images.php  		- Purpose:
+		canc_images.php  		- Purpose:
+		carousel.php  			- Purpose:
+		categories.php  		- Purpose:
+		cat_vise_images.php  	- Purpose:
+		customers.php  			- Purpose:
+		edit-listing.php  		- Purpose:
+		edit_cat.php  			- Purpose:
+		edit_client.php  		- Purpose:
+		edit_package.php  		- Purpose: edit payment plan
+		edit_template.php  		- Purpose: edit user and admin listing templates
+		images_listings.php  	- Purpose:
+		info_images.php  		- Purpose:
+		login.php  				- Purpose:
+		logout.php  			- Purpose:
+		packages.php  			- Purpose:
+		post_ebay.php  			- Purpose: takes listings and combines template and sends through ebay api
+		pub_images.php  		- Purpose:
+		signup.php  			- Purpose:
+		swank.php  				- Purpose: swank php file for swank.
+		templates.php  			- Purpose:
+		template_view.php  		- Purpose:
+		
+		//================dash/stoplisting/admin/ebaycron.php
+		Runs the ebay cron file that processes unpublished but ready to publish listings that are stored on the server in increments.
+		
+
+/===================dash/stoplisting/bucket Folder ===============
+
+Location: dash/stoplisting/bucket
+Purpose: contains, js, css and fonts. The fonts, css, and js folders outside these should be merged in this bucket folder.
+--
+/===================dash/stoplisting/ckeditor Folder ===============
+Location: dash/stoplisting/ckeditor
+Purpose: used for the WYSIWYG HTML editor
+--
+/===================dash/stoplisting/ckfinder Folder ===============
+Location: dash/stoplisting/ckfinder
+Purpose: ckfinder
+--
+/===================dash/stoplisting/css Folder ===============
+Location: dash/stoplisting/ 
+Purpose: holds some css
+--
+/===================dash/stoplisting/dropbox-sdk Folder ===============
+Location: dash/stoplisting/dropbox-sdk
+Purpose: ?? Not sure. It would be great if the files that are being uploaded to our server were being sent to somewhere like AWS or a cdn
+--
+/===================dash/stoplisting/examples Folder ===============
+Location: dash/stoplisting/examples
+Purpose: seems to hold example files for the WYSIWYG DEMO examples. (DELETE THIS)
+--
+/===================dash/stoplisting/font Folder ===============
+Location: dash/stoplisting/font
+Purpose: holds font files
+--
+
+/===================dash/stoplisting/img Folder ===============
+Location: dash/stoplisting/img
+Purpose: holds some images used in the user panel. 
+
+Location: dash/stoplisting/img/avatar
+Purpose:  I would like to switch the avatar to a gravatar system.
+
+--
+/===================dash/stoplisting/inc/ Folder ===============
+Pupose of all Files: These are the files that users see when using the stoplisting desktop user panel.
+
+		Location: dash/stoplisting/inc/account.php
+		Purpose: should be removed, not used anymore was replaced with the profile.php
+		--
+		
+		Location: dash/stoplisting/inc/add_template.php
+		Purpose: Create New HTML Listing Template (uses Ckeditor for WYSIWYG EDITOR)
+		--
+
+		Location: dash/stoplisting/inc/app.php 
+		Purpose: should be removed, not used anymore
+		--
+		Location: dash/stoplisting/inc/dash.php
+		Purpose: user dashboard page
+		--
+		Location: dash/stoplisting/inc/design.php
+		Purpose: should be removed, not used anymore
+		--
+		Location: dash/stoplisting/inc/edit-listing.php
+		Purpose: should be removed, not used anymore, replaced with listings.php
+		--
+		Location: dash/stoplisting/inc/edit_template.php
+		Purpose: Used to make changes to html templates
+		--
+		Location: dash/stoplisting/inc/footer.php
+		Purpose: footer include
+		--
+		Location: dash/stoplisting/inc/header.php
+		Purpose: should be removed, not used anymore
+		--
+		Location: dash/stoplisting/inc/listings.php
+		Purpose: used to pull up listings for users
+		--
+		Location: dash/stoplisting/inc/login.php
+		Purpose: login page for user panel
+		--
+		Location: dash/stoplisting/inc/logout.php
+		Purpose: logout page
+		--
+		Location: dash/stoplisting/inc/manage.php
+		Purpose: serves as a template guide for listings.php (both need to be harmonized manage.php is how it should look but listings.php is how it should function?)
+		--
+		Location: dash/stoplisting/inc/new_signup.php
+		Purpose: this is to serve as a postback in for gumroad. This should be replaced with Stripe for payment processing to assembly. But the signup method code will be the same.
+		--
+		Location: dash/stoplisting/inc/profile.php
+		Purpose: shows user their account profile and allows them to adjust their account settings.
+		--
+		Location: dash/stoplisting/inc/promote.php
+		Purpose: This page is for the promotion page. There is no real substance added to this page yet. (coming soon)
+		--
+		Location: dash/stoplisting/inc/signup.php
+		Purpose: Page intended as a signup/purchase page for users who buy online, or try to access user panel without an account.
+		--
+		Location: dash/stoplisting/inc/templates.php
+		Purpose: Shows the list of templates and give user the option to create a new template or to edit an existing one.
+		--
+		Location: dash/stoplisting/inc/upgrade.php
+		Purpose: upgrade page to convert users to higher tier paying members. (new_signup.php should handle the upgrade and postback)
+		--
+		Location: dash/stoplisting/inc/upload.php
+		Purpose: upload page for users.
+		--
+		Location: dash/stoplisting/inc/404.php
+		Purpose: 404 page
+		--
+
+
+
+
+
+/===================dash/stoplisting/script Folder ===============
+Location: dash/stoplisting/script/timthumb.php
+Purpose: image manipulation
+--
+
+
+/===================dash/stoplisting/social Folder ===============
+Purpose of all files: Social Login for facebook and twitter (in user panel only)
+
+Location: dash/stoplisting/social/config/dbconfig.php
+Purpose: supplies the database details for the social login (the sensitive data is removed)
+--
+
+Location: dash/stoplisting/social/config/fbconfig.php
+Purpose: supplies the facebook api info for the social login (the sensitive data is removed)
+--
+Location: dash/stoplisting/social/config/twconfig.php
+Purpose: supplies the twitter api info for the social login (the sensitive data is removed)
+--
+
+Location: dash/stoplisting/social/config/functions.php
+Purpose: checks user social oauth login 
+--
+
+
+
+/===================dash/stoplisting/template_view Folder ===============
+Location: dash/stoplisting/template.php
+Purpose: Replaces all of the Variables that are included in HTML templates with regex replacements Ex: {Gallery} replaced with the gallery code for their images in the listing.
+--
+/===================dash/stoplisting/tokens Folder ===============
+Location: dash/stoplisting/ 
+Purpose: I believe this is a repository of ebay tokens that are being generated.... (not positive)
+--
+/===================dash/stoplisting/trading Folder ===============
+Location: dash/stoplisting/tradingConstants.php
+Purpose: Has ebay tradingconstants
+--
+Line 29-31 sensitive api data removed
+Note: this data is very similar to Location: dash/ebay_trading/tradingConstants.php page: and 
+Location: dash/ebay_trading/ebay.ini perhaps they could merge into one?
+
+/===================dash/stoplisting/upload_dropbox Folder ===============
+Purpose: This is where the photos from the regular photo upload from app are uploaded
+
+	/---
+	Location: dash/stoplisting/upload_dropbox/livefinder folder
+	Purpose: this is where the photos from the livefinder service for the app are uploaded
+	/--
+
+/===================dash/stoplisting/upload_editor Folder ===============
+Location: dash/stoplisting/ 
+Purpose: 
+--
+/===================dash/stoplisting/upload1 Folder ===============
+Purpose: file uploader (for images)
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/===================dash/ebay_trading Folder ===============
+Location: dash/ebay_trading/tradingConstants.php page:
+Purpose: Sets constants for Ebay API Production and Sandbox
+--
+Line 29-31 Has the ebay api production values removed for security
+Line 34's Auth Token is also removed.
+
+Location: dash/ebay_trading/index.php
+Purpose: Inserting New Categories into Database (?)
+--
+Line 8 appid removed
+Line 13-14 connection information removed (though it shouldnt even be written that way)
+
+Location: dash/ebay_trading/ebay_cat.php
+Purpose: loads category names and data from database
+--
+Line 2-3 sql info removed (it was always commented though)
+
+
+Location: dash/ebay_trading/ebay.ini
+Purpose: ini file for sensitive data similar to tradingConstants.php
+--
+Removed sensitive data
+
+
+Location: dash/ebay_trading/addItem.php
+Purpose: To Test the additem to an ebay account (Test page)
+
+------------------------------------------------------------
+
+
+/===================dash/ebay Folder ===============
+
+Location: dash/ebay/findingswank.php
+Purpose: Serves as a modified version of finding.php for swank version. This File will be moved to swanks own api folder (stoplisting.com/api/findingswank.php)
+--
+Line 11-15: Sensitive API Login Data Removed
+
+
+Location: dash/ebay/finding.php
+Purpose: Serves for the processes needed in the stoplisting admin panel, such as retrieving listing data.
+--
+Line 9-12: Sensitive API Login Data Removed
+
+
+		/===================dash/ebay/addItem Folder ===============
+		Folder Purpose: Ajax ebay categories generation in the admin panel   http://xajax.sourceforge.net/
+		
+		Location: dash/ebay/addItem/ebaycats.php
+		Purpose: ebay category selector
+		--
+		Line 5-6 DB data removed
+		
+		
+		============================================================
+
+--------------------------------------------------------------
+
+
+/===================dash/data Folder ===============
+	/===================dash/data/cache Folder ===============
+	Purpose: ???
+===============================================
+
+
+---------------------------------------------------------------
+
+
+/===================dash/config Folder ===============
+Probably intended for use with autoload, but i see no use of it.
+
+/===================dash/.git Folder ===============
+Files from the previous developer for .git control, (the version control got messed up)

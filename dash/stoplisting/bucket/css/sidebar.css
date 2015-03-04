@@ -1,0 +1,19 @@
+.brand  {background:#252523;border-right:1px solid rgba(7,7,5,0.6);}
+.header {background:rgba(5,5,5,0.93);}
+.brand .sidebar-toggle-box {background:rgba(5,5,5,0.90);margin-top:14px;}
+.sidebar-toggle-box .fa {color:rgba(255,255,255,0.7) !important;} 
+header, .brand {height: 60px !important;}
+.logo img {height: 33px !important;width:173px;margin-top:-14px;}
+#sidebar {background:#98c632 !important; box-shadow: 1px 1px rgba(41,43,37,0.22), inset 10px 10px rgba(41,43,37,0.12);border-right:1px solid rgba(37,37,35,0.2);}
+#sidebar a {color: #303031;}
+#sidebar a:hover {background: rgba(5,5,5,.90);color:rgba(234,238,233,1);}
+#sidebar a:hover .fa,#sidebar a.active .fa {color:rgba(234,238,233,0.9);}
+#sidebar li {border-bottom: 1px solid rgba(41,43,37,0.14);}
+#sidebar li:active {background:#98c632;}
+#nav-accordion {margin-top:-20px;}
+
+#sidebar a.active{background:#3a3a32;color:rgba(234,238,233,0.9);}
+#sidebar ul .sub li {background:#1a1a18 !important;}
+#sidebar ul .sub li a {color:rgba(234,238,233,0.9) !important;}
+.dropdown-toggle {background:transparent !important; border:none!important;}
+.dropdown-toggle #user_avatar {border-radius:10%;width:60px;margin-right:15px;}

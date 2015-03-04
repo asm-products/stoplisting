@@ -1,0 +1,15 @@
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9_-]{2,35})/([^.]+)/([^.]+)/([^.]+)/([^.]+)/([^.]+)?$ index\.php?page=$1&pram1=$2&pram2=$3&pram3=$4&pram4=$5&pram5=$6 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]{2,35})/([^.]+)/([^.]+)/([^.]+)/([^.]+)?$ index\.php?page=$1&pram1=$2&pram2=$3&pram3=$4&pram4=$5 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]{2,35})/([^.]+)/([^.]+)/([^.]+)?$ index\.php?page=$1&pram1=$2&pram2=$3&pram3=$4 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]{2,35})/([^.]+)/([^.]+)?$ index\.php?page=$1&pram1=$2&pram2=$3 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]{2,35})/([^.]+)?$ index\.php?page=$1&pram1=$2 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]{2,35})/?$ index\.php?page=$1 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]{2,35})?$ index\.php?page=$1 [L]
