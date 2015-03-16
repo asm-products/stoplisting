@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textColor="@color/layout_background" >
+
+ 
+    <TextView
+        android:id="@+id/versionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:gravity="center"
+        android:text="About StopListing"
+        android:textStyle="bold|italic"
+        android:textColor="@color/dark_font"
+        android:textSize="24sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_marginTop="10dp"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/uploadPhotoList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@drawable/listitem_selector" >
+        </ListView>
+
+        <ImageView
+            android:id="@+id/fadeTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/fade_top"
+            android:scaleType="fitXY"
+            android:tint="#118cff" />
+
+        <ImageView
+            android:id="@+id/fadeBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/fade_bottom"
+            android:scaleType="fitXY"
+            android:tint="#118cff" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StopListing</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- main action menu -->
+    <string name="icon_dashboard">&#xf015;</string>
+    <string name="icon_upload">&#xf093;</string>
+    <string name="icon_manage">&#xf040;</string>
+    <string name="icon_promote">&#xf0a1;</string>
+    <string name="icon_swanksearch">&#xf1ce;</string>
+    <string name="icon_search">&#xf002;</string>
+    <string name="icon_account">&#xf007;</string>
+    <string name="icon_upgrade">&#xf091;</string>
+    <string name="icon_support">&#xf05a;</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_upload">Upload</string>
+    <string name="title_manage">Manage</string>
+    <string name="title_promote">Promote</string>
+    <string name="title_swanksearch">Swank Search</string>
+    <string name="title_livefinder">Live Finder</string>
+    <string name="title_account">Account</string>
+    <string name="title_upgrade">Upgrade</string>
+    <string name="title_support">Support</string>
+
+    <!-- dashboard page -->
+    <string name="title_add_thisweek">Added This Week</string>
+    <string name="title_in_moderation">In Moderation</string>
+    <string name="title_need_moreinfo">Need More Info</string>
+    <string name="title_need_help">Need Help</string>
+    <string name="value_add_thisweek">50</string>
+    <string name="value_in_moderation">30</string>
+    <string name="value_need_moreinfo">5</string>
+    <string name="value_need_help"><![CDATA["?"]]></string>
+    
+    <string name="title_edit">EDIT</string>
+    <string name="title_remove">REMOVE</string>
+    <string name="title_list">LIST</string>
+    <string name="title_relist">RELIST</string>
+    
+    <!-- account page -->
+
+    <string name="title_version">Beta</string>
+    <string name="title_place">BetaFishEmporium</string>
+    <string name="title_options">OPTIONS</string>
+    
+    <string name="icon_user">&#xf007;</string> <!-- fa-user -->
+    <string name="icon_upgrade_plan">&#xf062;</string> <!-- fa-arrow-up -->
+    <string name="icon_more_info">&#xf05a;</string> <!-- fa-info-circle -->
+    <string name="icon_setting">&#xf013;</string> <!-- fa-cog -->   
+    <string name="icon_disable_account">&#xf1db;</string> <!-- fa-circle-thin -->
+    <string name="icon_delete_account">&#xf12d;</string> <!-- fa-eraser -->
+    <string name="icon_log_out">&#xf08b;</string> <!-- fa-sign-out -->
+    
+    <string name="title_edit_profile">Edit My Profile</string>
+	<string name="title_upgrade_plan">Upgrade My Current Plan</string>
+	<string name="title_account_sync">Account Sync</string>
+    <string name="title_listing_setting">My Listing Settings</string>
+    <string name="title_disable_account">Disable My Account</string>
+	<string name="title_delete_account">Delete My Account</string>
+    <string name="title_log_out">Logout</string>
+	
+    <!-- Edit Profile page -->
+    <string name="title_profile_guide">Please change the fields which you want to modify.</string>
+    <string name="title_update_profile">Update Profile</string>
+    <string name="hint_username">User Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_passwd">Password</string>
+    <string name="hint_new_passwd">New Password</string>
+    <string name="hint_confirm_passwd">Confirm Password</string>
+    
+	<!-- More Info page -->
+	<string name="title_save">Save</string>
+    <string name="icon_money">&#xf0d6;</string> <!-- fa-money -->
+    <string name="title_paypal">PayPal</string>
+    <string name="title_dropbox">DropBox</string>
+	<string name="title_set_ebay_auth_token">Set Ebay Auth Token</string>
+	<string name="title_btn_ebay_token">Set Token</string>
+	<string name="title_ebay_auth_token">Ebay Auth Token</string>
+	
+	<!-- My Listing Settings page-->
+	<string name="icon_default_template">&#xf1a5;</string> <!-- fa-delicious -->
+    <string name="title_default_template">Default Template</string>
+    <string name="title_general_cond">General Condition</string>
+	<string name="title_price_pref">Price Preference</string>
+	<string name="title_listing_pref">Listing Preference</string>
+    
+	
+	<string name="title_general_cond_desc">General Condition Notes can be used to give general instructions on how you would like your listings made.</string>
+	<string name="title_price_pref_desc">By Default, We base listing pricing competitively to the platform market. However, If you have certain preferences, i.e Pricing floors, End Price Preferences( i.e Ending all prices with ".99") Let us know here!</string>
+	<string name="title_listing_pref_desc">If you have any particular preferences on how you would like your listings presented, let us know here.</string>
+	
+	<string name="title_general_cond1">General Condition:</string>
+	<string name="title_price_pref1">Price Preference:</string>
+	<string name="title_listing_pref1">Listing Preference:</string>
+	
+	<string name="title_submit_btn">Submit</string>
+	<string name="title_updating_btn">Updating&#x2026;</string>
+	
+	<string name="icon_general_cond">&#xf1cd;</string> <!-- fa-support (alias) -->
+	<string name="icon_price_pref">&#xf0d6;</string> <!-- fa-money -->
+	<string name="icon_listing_pref">&#xf0ca;</string> <!-- fa-list-ul -->
+	
+    <!-- Published item -->
+    <string name="title_item_price">Price</string>
+    <string name="title_item_date">Date</string>
+    <string name="title_item_state">State</string>
+    <string name="title_item_format">Format</string>
+    <string name="title_item_duration">Duration</string>
+    <string name="title_item_promoted">Promoted</string>
+    <string name="title_item_template">Template</string>
+    <string name="title_facebook">&#xf082;</string> <!-- f0a9 -->
+    <string name="title_twitter">&#xf174;</string> <!-- f173 -->
+    <string name="title_google">&#xf0d4;</string> <!-- f1a0 -->
+
+    <string name="icon_item_edit">&#xf040;</string> <!-- fa-pencil -->
+    <string name="icon_item_remove">&#xf00d;</string> <!-- fa-remove -->
+    <string name="icon_item_check">&#xf00c;</string> <!-- fa-check -->
+
+	<string name="title_no_pubitem">There Are No Published Listings Yet</string> 
+	<string name="title_no_unpubitem">There Are No Unpublished Listings Yet</string> 
+	<string name="title_no_rejecteditem">There Are No Rejected Listings Yet</string> 
+	<string name="title_no_ebay_auth">You have not yet authorized our app to access your ebay account for listing new items. \nWould You Like to set it now?</string> 
+	<string name="title_dont_show_this_again">Don<![CDATA["'"]]>t show again.</string>
+	<string name="title_set_now">Set Now</string>
+	<string name="title_no_thanks">No Thanks</string>
+	
+    <!-- upgrade page -->
+    <string name="title_upgradepage">Pricing Plans</string>
+    <string name="title_plain_basic">Basic Seller Package</string>
+    <string name="title_plain_power">Power seller Package</string>
+    <string name="title_plain_business">Small Business Package</string>
+    <string name="title_plain_business_plus">Small Business Plus Package</string>
+    <string name="desc_plain_format">Access to our listing service for up to <b><i>%d</i></b> items monthly</string>
+    <string name="desc_plain_basic">Access to our listing service for up to 100 items monthly</string>
+    <string name="desc_plain_power">Access to our listing service for up to 200 items monthly</string>
+    <string name="desc_plain_business">Access to our listing service for up to 300 items monthly</string>
+    <string name="desc_plain_business_plus">Access to our listing service for up to 200 items monthly</string>
+    <string name="title_plan_cost_unit">$</string>
+    <string name="title_plan_cost_value">100</string>
+    <string name="title_plan_cost_slash">/</string>
+    <string name="title_plan_duration">Mo</string>
+    <string name="title_plan_upgrade">UPGRADE</string>
+
+    <!-- upload page -->
+    <string name="title_recent_uploads">Recent Uploads</string>
+    <string name="title_add_newitem">&#xf055; Add New Item</string>
+    <string name="icon_close">&#xf00d;</string>
+    <string name="icon_camera">&#xf030;</string>
+    <string name="icon_picture">&#xf03e;</string>
+    <string name="icon_listing">&#xf0fe;</string>
+    <string name="icon_back">&#xf053;</string>
+
+    <!-- upload Image page -->
+    <string name="title_link_dropbox">&#xf16b; Link with Dropbox</string>
+    <string name="title_unlink_dropbox">&#xf16b; Unlink from Dropbox</string>
+    <string name="title_pick_photo">&#xf03e; Load Image</string>
+    <string name="title_upload_photo">&#xf0ee; Upload Image</string>
+    <string name="title_add_item">&#xf055; List New Item</string>
+    <string name="title_take_photo">Take Photos</string>
+    <string name="title_choose_from">Select From Files</string>
+    <string name="title_cancel">Cancel</string>
+    <string name="title_del_prev_photo">Delete Previous Photo</string>
+    <string name="title_del_current_photoset">Delete current Photo Set</string>
+
+    <!-- swank and live page -->
+    <string name="title_hint_search">Search</string>
+    
+    <string name="title_large_swank">SWANK</string>
+    <string name="title_large_avgprice">AVG PRICE</string>
+    <string name="title_large_turnover">TURNOVER</string>
+    
+    <string name="value_swank1">0</string>
+    <string name="value_price1">$0.00</string>
+    <string name="value_turnover1">1.0 Day(s)</string>
+    
+    <string name="value_itemname1">Festina Classic Leather Mens Quartz Clock Black White</string>
+    <string name="title_latest_sold">Last\nSold</string>
+    <string name="title_latest_price">Sold\nFor</string>
+    <string name="value_latest_sold">09/09/2014</string>
+    <string name="value_latest_price">$190.00</string>
+    <string name="title_takeanotherphoto">TAKE ANOTHER PHOTO</string>
+    <string name="value_swank2">87</string>
+    <string name="value_price2">$159.32</string>
+    <string name="value_itemname2">Samsung Galaxy S4 Mini Smartphone</string>
+    <string name="title_listitem">LIST ITEM</string>
+    <string name="value_itemstate">WRONG ITEM</string>
+    <string name="title_condition">Condition</string>
+    <string name="title_listingtype">Listing Type</string>
+    <string name="title_normalsearch">&#xf002; <b>Normal</b></string>
+    <string name="title_exactsearch">&#xf00e; <b>Exact</b></string>
+    <string name="title_searchnote">Note : </string>
+    <string name="title_searchnoteac">OSNF-AC</string>
+    <string name="title_searchnoteacalt">OSNF-AC+ALT</string>
+    <string name="title_searchinfo"><![CDATA["?"]]></string>
+    <string name="title_gotohome">&#xf015;</string>
+    <string name="title_no_result">No Search Result</string>
+    <string name="title_prevpage">&#xf053;</string>
+    <string name="title_nextpage">&#xf054;</string>
+
+    <!-- Edit Item Page -->
+    <string name="title_edit_item">Edit Item</string>
+    <string name="title_update_item">Update Item</string>
+    <string name="title_title">Title:</string>
+    <string name="title_description">Description:</string>
+    <string name="title_category_id">Category ID:</string>
+    <string name="title_price">Price:</string>
+    <string name="title_pricing_details">Pricing Details:</string>
+    
+    
+</resources>

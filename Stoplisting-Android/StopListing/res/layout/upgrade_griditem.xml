@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/update_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <LinearLayout
+        android:id="@+id/update_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/block_shape"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/planTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_plain_basic"
+            android:textColor="@color/dark_font"
+            android:textSize="18sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/planCostContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/planCostUnitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_plan_cost_unit"
+                android:textColor="@color/dark_font"
+                android:layout_gravity="start"
+                android:textSize="18sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/planCostValueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_plan_cost_value"
+                android:textColor="@color/dark_font"
+                android:textSize="30sp"
+                android:textStyle="bold" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/slashMarkTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_plan_cost_slash"
+                android:textColor="@color/dark_font"
+                android:textSize="30sp"
+                android:textStyle="bold" >
+            </TextView>
+            
+            <TextView
+                android:id="@+id/planDurationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_plan_duration"
+                android:textColor="@color/dark_font"
+                android:textSize="20sp"
+                android:textStyle="bold" >
+            </TextView>
+            
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/planDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/desc_plain_basic"
+            android:textColor="@color/grey_font"
+            android:textSize="14sp" >
+        </TextView>
+
+        <Button
+            android:id="@+id/upgradeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/light_font"
+            android:text="@string/title_plan_upgrade"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn1_selector" />
+    </LinearLayout>
+
+</LinearLayout>

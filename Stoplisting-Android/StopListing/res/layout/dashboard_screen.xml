@@ -1,0 +1,277 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textColor="@color/layout_background" >
+
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/leftTab"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/leftTabText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/tab_sel_bg_color"
+                android:gravity="center"
+                android:text="STATS"
+                android:textColor="@color/tab_sel_text_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightTab"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/rightTabText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/tab_bg_color"
+                android:gravity="center"
+                android:text="PUBLISHED"
+                android:textColor="@color/tab_text_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableLayout
+            android:id="@+id/page1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#fff"
+            android:dividerPadding="10dp"
+            android:visibility="visible" >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:divider="#fff"
+                android:dividerPadding="1dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/toWeekLL"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/stats_btn_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/weekTotalTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/value_add_thisweek"
+                        android:textColor="#7dae01"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/addThisWeekTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/title_add_thisweek"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/listitem_divider_color2" />
+
+                <LinearLayout
+                    android:id="@+id/toManageLL"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/stats_btn_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/readyPublishTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/value_in_moderation"
+                        android:textColor="#7dae01"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/inModerationTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/title_in_moderation"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/listitem_divider_color2" />
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1" >
+
+                <LinearLayout
+                    android:id="@+id/toRejectedLL"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/stats_btn_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/needMoreTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/value_need_moreinfo"
+                        android:textColor="#7dae01"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/needMoreInfoTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/title_need_moreinfo"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/listitem_divider_color2" />
+
+                <LinearLayout
+                    android:id="@+id/toHelpLL"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/stats_btn_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/needHelpTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/value_need_help"
+                        android:textColor="#808080"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/needHelpValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/title_need_help"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <FrameLayout
+            android:id="@+id/page2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tiled_background_pub" >
+
+                <ListView
+                    android:id="@+id/itemList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#dfff"
+                    android:dividerHeight="0.8dp"
+                    android:listSelector="#00000000" >
+                </ListView>
+
+                <ImageView
+                    android:id="@+id/fadeTop"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/fade_top"
+                    android:scaleType="fitXY"
+                    android:tint="#118cff" />
+
+                <ImageView
+                    android:id="@+id/fadeBottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/fade_bottom"
+                    android:scaleType="fitXY"
+                    android:tint="#118cff" />
+
+                <TextView
+                    android:id="@+id/noPubedItemTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="30dp"
+                    android:text="@string/title_no_pubitem"
+                    android:textColor="@color/grey_font"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/page3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/ebay_auth_note_screen"
+                android:visibility="gone" />
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

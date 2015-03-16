@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/manage_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#557dbf10"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/itemPhotoIv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_media" />
+            <ProgressBar
+                android:id="@+id/progBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/itemTitleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BLACKBERRY PINK SMARTPHONE WITH CARRYING CASE"
+                android:textColor="@color/dark_font"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/itemEditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/title_edit"
+                    android:textColor="#0a108a"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+				<!-- 
+				android:textColor="#bf3610"
+				 -->
+                <TextView
+                    android:id="@+id/itemRemoveBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/title_remove"
+                    android:textColor="#cc090d"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+				<!-- 
+				android:textColor="#7dbf10"
+				 -->
+                <TextView
+                    android:id="@+id/itemReListBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="@string/title_relist"
+                    android:textColor="#68a405"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <CheckBox
+                android:id="@+id/place1Listed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:button="@drawable/place1_checkbox"
+                android:checked="true"
+                android:enabled="false"
+                android:gravity="center" />
+
+            <CheckBox
+                android:id="@+id/place2Listed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:button="@drawable/place2_checkbox"
+                android:checked="true"
+                android:enabled="false"
+                android:gravity="center" />
+
+            <CheckBox
+                android:id="@+id/place3Listed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:button="@drawable/place3_checkbox"
+                android:checked="true"
+                android:enabled="false"
+                android:gravity="center" />
+
+            <CheckBox
+                android:id="@+id/place4Listed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:button="@drawable/place4_checkbox"
+                android:checked="true"
+                android:enabled="false"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/itemPriceTv"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:background="#272626"
+            android:lines="1"
+            android:text="$125.00"
+            android:textColor="@color/light_font"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</LinearLayout>

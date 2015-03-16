@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/takePhotoBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/action_menu_but"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/title_take_photo"
+        android:textColor="#007AFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/chooseFromBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/action_menu_but"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/title_choose_from"
+        android:textColor="#007AFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/action_menu_but"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/title_cancel"
+        android:textColor="#007AFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

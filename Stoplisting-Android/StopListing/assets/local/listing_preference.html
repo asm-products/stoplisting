@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<title>StopListing</title>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	}
+body {
+	font-size: 100%;
+	height: 100%;
+	width: 100%;
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+	background: white;
+	}
+.icon {
+	margin-bottom: 10px;
+	}
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 74px;
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .65);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.65);
+	z-index: 999;
+	}
+#navigation {
+	width: auto;
+	background: black;
+	z-index: 99999;
+    border-bottom: 2px solid #848484;
+    height: 54px;
+	}
+#container {
+	width: 100%;
+	max-width: 600px;
+    min-height: 600px;
+	margin: 0 auto 0 auto;
+	color: #000;
+	text-align: center;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+    box-sizing: border-box;
+	}
+.top {
+	min-width: 50px;
+	height: 46px;
+	width: 25%;
+	margin: 0;
+	cursor: pointer;
+	color: #fff;
+	border: 0;
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	text-shadow: 1px 1px 3px #666666;
+	font-size: 14px;
+	background: transparent;
+	z-index: 999999;
+    border-right: 1px solid #848484;
+    letter-spacing: 0.25px;
+    padding: 0;
+	}
+.right {
+    border-right: 0;
+}
+.top:active {
+    color: rgba(255,255,255,0.5);
+}
+.top i {
+    font-size: 24px;
+}
+input[name=details] {
+	background: transparent;
+	width: 25px;
+	height: 23px;
+	font-size: 20px;
+	text-align: center;
+	border: 0;
+	vertical-align: middle;
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	}
+#plus, #minus {
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	vertical-align: middle;
+	color: #ffffff;
+	font-size: 20px;
+	width: 82px;
+	height: 45px;
+	text-decoration: none;
+  	-webkit-border-radius: 7px;
+  	-moz-border-radius: 7px;
+  	-webkit-box-shadow: 0px 1px 3px #666666;
+  	-moz-box-shadow: 0px 1px 3px #666666;
+  	text-shadow: 1px 1px 3px #666666;
+  	border: solid #808080 1px;
+  	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #000000),
+		color-stop(0.5, #000000),
+		color-stop(0.5, #292929),
+		color-stop(1, #808080)
+		);
+  	cursor: pointer;
+	}
+#plus:active, #minus:active {
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #000000),
+		color-stop(0.5, #000000),
+		color-stop(0.5, #292929),
+		color-stop(1, #808080)
+		);
+	-webkit-box-shadow: 0px 1px 10px #666666;
+  	-moz-box-shadow: 0px 1px 10px #666666;
+	}
+button.remove {
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	vertical-align: middle;
+	color: #ffffff;
+	font-size: 14px;
+	width: 85px;
+	height: 45px;
+	text-decoration: none;
+  	-webkit-border-radius: 7px;
+  	-moz-border-radius: 7px;
+  	-webkit-box-shadow: 0px 1px 3px #666666;
+  	-moz-box-shadow: 0px 1px 3px #666666;
+  	text-shadow: 1px 1px 3px #666666;
+  	border: solid #808080 1px;
+  	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #000000),
+		color-stop(0.5, #000000),
+		color-stop(0.5, #292929),
+		color-stop(1, #808080)
+		);
+  	cursor: pointer;
+  	margin-left: 5px;
+	}
+button.remove:active {
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #000000),
+		color-stop(0.5, #000000),
+		color-stop(0.5, #292929),
+		color-stop(1, #808080)
+		);
+	-webkit-box-shadow: 0px 1px 10px #666666;
+  	-moz-box-shadow: 0px 1px 10px #666666;
+	}
+.wrapf {
+	width: 280px;
+	margin: 0 auto 0 auto;
+	padding-bottom: 14px;
+	margin-bottom: 14px;
+	border-bottom: 1px solid #808080;
+	}
+.dropf select {
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	background: transparent;
+	color: #fff;
+	width: 305px;
+	padding: 5px;
+	font-size: 14px;
+	height: 44px;
+	border: 1px solid #808080;
+	margin: 0 auto 0 auto;
+	text-shadow: 1px 1px 3px #666666;
+	}
+.dropf {
+	border: 1px solid #808080;
+	margin-bottom: 5px;
+	width: 280px;
+	height: 44px;
+	overflow: hidden;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-box-shadow: 0px 1px 3px #666666;
+	-moz-box-shadow: 0px 1px 3px #666666;
+	text-shadow: 1px 1px 3px #666666;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #000000),
+		color-stop(0.5, #000000),
+		color-stop(0.5, #292929),
+		color-stop(1, #808080)
+		);
+	}
+.servf {
+	margin: 0 auto 0 auto;
+	width: 280px;
+	}
+.directions {
+	
+	}
+.steps {
+	text-align: left;
+	}
+p {
+	line-height: 22px;
+	text-align: left;
+	padding: 0 20px 0 20px;
+	}
+.highlight .dropf {
+	box-shadow: 0px 0px 10px #FF0000;
+	-webkit-box-shadow: 0px 0px 10px #FF0000;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#FF6D6D), to(#FF0000));
+  	background: -moz-linear-gradient(top, #FF6D6D, #FF0000);
+	border: 1px solid #FF0000;
+	text-shadow: 1px 1px 3px #666666;
+	}
+.highlight select {
+	border: 1px solid #FF0000;
+	}
+.highlightyellow .dropf {
+	box-shadow: 0px 0px 10px #FBB917;
+	-webkit-box-shadow: 0px 0px 10px #FBB917;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#FDD017), to(#FBB917));
+  	background: -moz-linear-gradient(top, #FDD017, #FBB917);
+	border: 1px solid #FBB917;
+	text-shadow: 1px 1px 3px #666666;
+	}
+.highlightyellow select {
+	border: 1px solid #FBB917;
+	}
+p.answer {
+	margin-top: 55px;
+	font-weight: bold;
+    text-align: center;
+	}
+p.answerzone {
+	margin-top: 5px;
+	font-size: 13px;
+    text-align: center;
+	}
+ul.zoned {
+	list-style-type: none;
+	font-size: 13px;
+	}
+ul.zoned li {
+	font-style: italic;
+	}
+#slider { 
+	position: absolute;
+	top: 71px;
+	left: 50%;
+	z-index:10;
+	height: 33px;
+	width: 6px;
+	-webkit-box-shadow: 3px 0px 10px -1px #000;
+	text-decoration: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-box-shadow: 5px 2px 5px #000000;
+	-moz-box-shadow: 5px 2px 5px #000000;
+	border: solid #848484 2px;
+	background: #eee;
+	z-index: 99999999;
+	}
+#response {
+	padding: 0 10px 0 10px;
+	}
+.label-info {
+	margin: 9px 0 0 20px;
+	}
+.labels {
+	background: #fff;
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	font-size: 14px;
+	text-align: left;
+	border: 2px solid #000;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	outline: 0;
+	width: 100%;
+	height: 25px;
+	line-height: 30px;
+	v-align: text-middle;
+	padding: 5px;
+	box-sizing: border-box;
+	height: 40px;
+	}
+.labelsarea {
+	background: #fff;
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	font-size: 14px;
+	text-align: left;
+	border: 2px solid #000;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	outline: 0;
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	}
+button.submit {
+	font-family: 'HelveticaNeue-Light', sans-serif;
+    font-weight: 300;
+	vertical-align: middle;
+	color: #ffffff;
+	font-size: 15px;
+	width: 185px;
+	height: 45px;
+	text-decoration: none;
+  	-webkit-border-radius: 4px;
+  	-moz-border-radius: 4px;
+  	background-color: rgba(11, 132, 10, 1);
+  	cursor: pointer;
+	}
+button.submit:active {
+	color: rgba(255,255,255,0.5);
+	}
+.error {
+	border: 2px solid #FF0000;
+	}
+.rate_link {
+	text-decoration: none;
+	color: #FACC2E;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+	font-size: 160px;
+	}
+.rate_link:active {
+	color: #B18904;
+	}
+p.rater {
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	}
+a.ratebutton {
+        text-decoration: none;
+    }
+b, strong {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+}
+i {
+    font-family: 'HelveticaNeue-UltraLight', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+</style>
+
+<script type="text/javascript">
+/*window.addEventListener('load', function() {
+                new FastClick(document.body);
+}, false);*/
+</script>
+
+</head>
+<body id="body" ontouchstart="" unselectable="on" onorientationchange="$('#update').click();">
+
+<div id="container">
+
+<div id="directions" class="directions">
+
+    <p style="margin-top: 25px;margin-bottom:25px; text-align: center;">If you have any particular preferences on how you would like your listings presented, let us know here.</p>
+
+</div><!-- #directions -->
+
+
+<div id="feature_request" class="directions">
+
+	<p class="feature_request_text">
+			
+		<p style="margin-bottom:0px; text-align: left; font-size: 14px;">Listing Preferences:</p>
+	
+		<p style="margin-bottom:20px; text-align: left;"><textarea id="featurer" name="featurer" class="labelsarea" rows="4"></textarea></p>
+		
+		<p style="margin-bottom:0px; text-align: left; font-size: 14px;">Enter Your E-Mail</p>
+	
+		<p style="margin-bottom:40px; text-align: left;"><input id="emailfeature" name="emailfeature" class="labels" type="email"/></p>
+		
+		<p style="text-align: center;"><button id="sendfeature" class="submit">Submit</button></p>
+		
+	</p><!-- .feature_request_text -->
+
+</div><!-- #feature_request -->
+    
+    <button style="display:none;" id="update"></button>
+    
+    
+</div><!-- #container -->
+
+<script type="text/javascript">
+/**
+webview.loadUrl("javascript:(function() { App.load('1','aaa@aaa.com'); })()");  
+*/
+var App = {
+	user_id: '',
+	load: function(userid, email){
+		$('#emailfeature').val(email);
+		this.user_id = userid;
+	}
+};
+
+$(document).ready( function() {
+                  
+	$('#update').click(function() {
+         var h = $(window).height();
+         $('#container').css('height', h);
+	});
+
+
+	//******************** SEND FEATURE ********************
+	$('#sendfeature').click(function() {
+	    $('#response').remove();
+		var feature_f = $('#featurer').val();
+		var email_f = $('#emailfeature').val();
+		var user_id = App.user_id;
+		
+		$('#featurer').removeClass('error');
+		$('#emailfeature').removeClass('error');
+
+		$('#response').empty();
+
+		if(feature_f === '') {
+			$('#featurer').addClass('error');
+			return false;
+		}
+		var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	    var $e = regex.test(email_f);
+	                        
+	    if (email_f === '') {
+	        $('#emailfeature').addClass('error');
+	        return false;
+	    } else if ($e == false) {
+	        $('#emailfeature').addClass('error');
+	        return false;
+	    }
+
+		$('#sendfeature').html('Sending...');
+		
+		$.ajax({
+			traditional: true,
+			type: 'GET',
+			url: 'http://stoplisting.com/api/?setact',
+			data: {
+				user_id: user_id,
+				listing_preference: feature_f,
+				email_request: email_f
+			},
+		  	cache: false,
+		  	success: function(data) {
+			  //success
+			  $('#sendfeature').html('Sent!').delay(800).html('Submit');
+			  
+			  $('#feature_request').append('<p id="response" style="margin-top: 40px; margin-bottom: 10px; text-align: center; font-style: italic;">Your message was successfully sent. Thanks for submitting your feedback, we\'ll be in touch!</p>');
+			  
+			  $('#featurer').removeClass('error');
+			  $('#emailfeature').removeClass('error');
+			  
+			  $('#featurer').val('');
+			  $('#emailfeature').val('');
+			       
+			  $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+ 			 }
+		}); 
+	});
+//******************** END ********************
+
+});
+
+</script>
+
+</body>
+</html>

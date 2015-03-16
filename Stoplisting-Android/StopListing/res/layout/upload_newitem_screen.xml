@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/authBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@drawable/btn1_selector"
+        android:text="@string/title_link_dropbox"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/logged_in_display"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:orientation="vertical" >
+
+                <com.listingproduct.stoplisting.ResizableImageView
+                    android:id="@+id/itemPhotoIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@drawable/placeholder"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/pickPhotoBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn1_selector"
+                        android:text="@string/title_pick_photo"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/uploadPhotoBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn1_selector"
+                        android:text="@string/title_upload_photo"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+                </LinearLayout>
+				<TextView
+				    android:id="@+id/itemCntTv"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="3dp"
+				    android:layout_marginRight="3dp"
+				    android:layout_marginTop="10dp"
+				    android:layout_marginBottom="1dp"
+				    android:paddingTop="2dp"
+				    android:paddingLeft="10dp"
+				    android:paddingBottom="2dp"
+				    android:background="#dddd"
+				    android:textSize="16sp"
+				    android:textStyle="bold"
+				    android:text="Item Photo List"
+				    android:textColor="#000"/>
+                <GridView
+                    android:id="@+id/imagesGv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="100dp"
+                    android:gravity="center"
+                    android:scrollbars="vertical"
+                    android:numColumns="4"
+                    android:padding="3dp"
+                    android:stretchMode="columnWidth" >
+                </GridView>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/uploadItemBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn1_selector"
+            android:text="@string/title_add_item"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

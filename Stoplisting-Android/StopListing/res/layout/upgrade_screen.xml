@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/screen_background"
+    android:textColor="@color/layout_background" >
+
+    <TextView
+        android:id="@+id/versionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:paddingLeft="20dp"
+        android:text="@string/title_upgradepage"
+        android:textColor="@color/dark_font"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dp" >
+
+        <GridView
+            android:id="@+id/upgradeItemGv"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:listSelector="@drawable/listitem_selector"
+            android:numColumns="2"
+            android:stretchMode="columnWidth" >
+        </GridView>
+
+        <ImageView
+            android:id="@+id/fadeTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="top"            
+            android:background="@drawable/fade_top"
+            android:scaleType="fitXY"
+            android:tint="#118cff" />
+
+        <ImageView
+            android:id="@+id/fadeBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/fade_bottom"
+            android:scaleType="fitXY"
+            android:tint="#118cff" />
+    </FrameLayout>
+
+</LinearLayout>

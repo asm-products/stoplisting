@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="item_content_font_size">14dp</dimen>
+    <dimen name="item_title_font_size">16dp</dimen>
+    <dimen name="upload_pic_grid_width">70dp</dimen>
+    <dimen name="upload_pic_grid_height">70dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+
+    <!-- For User defined segment control -->
+    <dimen name="radio_button_conner_radius">5dp</dimen> 
+    	
+</resources>

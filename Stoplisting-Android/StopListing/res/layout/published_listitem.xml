@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/action_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/itemPublishedTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:lines="1"
+        android:text="2 Hrs ago"
+        android:textColor="@color/listitem_itemtitle_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/itemNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:lines="1"
+        android:text="Random Item Name"
+        android:textColor="@color/listitem_title_color"
+        android:textSize="@dimen/item_title_font_size"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/itemInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/itemPhotoLayout"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/itemPhotoIv"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/itemphoto1" />
+
+            <LinearLayout
+                android:id="@+id/itemActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/itemEditBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/icon_item_edit"
+                    android:textColor="@color/grey_font"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_font" />
+
+                <TextView
+                    android:id="@+id/itemRemoveBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/icon_item_remove"
+                    android:textColor="@color/grey_font"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_font" />
+
+                <TextView
+                    android:id="@+id/itemCheckBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/icon_item_check"
+                    android:textColor="@color/listitem_title_color"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/itemContensLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:id="@+id/itemContents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:lines="1"
+                        android:text="@string/title_item_price"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:id="@+id/itemPriceTv"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:lines="1"
+                        android:text="$200"
+                        android:textColor="@color/listitem_itemcontent_color"
+                        android:textSize="@dimen/item_content_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:lines="1"
+                        android:text="@string/title_item_date"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:id="@+id/itemDateTv"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:lines="1"
+                        android:text="07/05/14"
+                        android:textColor="@color/listitem_itemcontent_color"
+                        android:textSize="@dimen/item_content_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:lines="1"
+                        android:text="@string/title_item_state"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:id="@+id/itemStateTv"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:lines="1"
+                        android:text="New"
+                        android:textColor="@color/listitem_itemcontent_color"
+                        android:textSize="@dimen/item_content_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:lines="1"
+                        android:text="@string/title_item_format"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:id="@+id/itemFormatTv"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:lines="1"
+                        android:text="Fixed Price"
+                        android:textColor="@color/listitem_itemcontent_color"
+                        android:textSize="@dimen/item_content_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:lines="1"
+                        android:text="@string/title_item_duration"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:id="@+id/itemDurationTv"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:lines="1"
+                        android:text="7 Days"
+                        android:textColor="@color/listitem_itemcontent_color"
+                        android:textSize="@dimen/item_content_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:lines="1"
+                        android:text="@string/title_item_promoted"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:id="@+id/itemPromoteTv"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:lines="1"
+                        android:text="f t g"
+                        android:textColor="@color/listitem_itemcontent_color"
+                        android:textSize="@dimen/item_content_font_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:lines="1"
+                        android:text="@string/title_item_template"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/listitem_itemtitle_color"
+                        android:textSize="@dimen/item_content_font_size" />
+
+                    <TextView
+                        android:id="@+id/itemTemplateTv"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:lines="1"
+                        android:text="Minimal Template #1"
+                        android:textColor="@color/listitem_itemcontent_color"
+                        android:textSize="@dimen/item_content_font_size" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/listitem_divider_color" />
+
+</LinearLayout>

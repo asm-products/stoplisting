@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="5dp"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:id="@+id/contentBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/thumbIv"
+            android:contentDescription="@string/app_name"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/thumb_holder"
+            android:scaleType="fitCenter" >
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/loadingProgBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+       	android:textSize="18sp"
+       	android:textColor="@color/dark_font"
+       	android:text="CHN" >
+    </TextView>
+
+</LinearLayout>

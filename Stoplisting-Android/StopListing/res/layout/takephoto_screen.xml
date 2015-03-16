@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/tiled_background"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" >
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/but5_selector"
+            android:gravity="center"
+            android:minHeight="10dp"
+            android:minWidth="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/icon_back"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/titleLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/logo_circle" />
+
+            <TextView
+                android:id="@+id/imgCntTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Set Photo Count : "
+                android:textColor="#fff"
+                android:textSize="18sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/imgCntTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/light_green"
+                android:textSize="18sp"
+                android:textStyle="bold" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/thumbIv"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/block_thumb2"
+            android:padding="5dp"
+            android:scaleType="fitXY" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="#c0ffffff" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#88ffffff" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:background="@color/light_green2" />
+
+    <FrameLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <!-- android:background="@drawable/custom_menu_but" -->
+
+        <FrameLayout
+            android:id="@+id/cancelPicBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/but4_selector"
+            android:paddingBottom="7dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="3dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/pictureTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:text="@string/icon_picture"
+                android:textColor="#fff"
+                android:textSize="27sp" />
+
+            <TextView
+                android:id="@+id/cancelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:text="@string/icon_close"
+                android:textColor="#f00"
+                android:textSize="27sp" />
+        </FrameLayout>
+
+        <!--
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/but4_selector"
+            android:text="@string/icon_close"
+            android:textColor="#fff"
+            android:textSize="25sp" /> 
+        -->
+
+        <Button
+            android:id="@+id/cameraBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/but4_selector"
+            android:text="@string/icon_camera"
+            android:textColor="#fff"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/uploadBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/but4_selector"
+            android:text="@string/icon_listing"
+            android:textColor="#fff"
+            android:textSize="28sp" />
+    </FrameLayout>
+
+</LinearLayout>

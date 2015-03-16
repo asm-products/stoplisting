@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textColor="@color/layout_background" >
+
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/leftTab"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/leftTabText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/tab_sel_bg_color"
+                android:gravity="center"
+                android:text="UNPUBLISHED"
+                android:textColor="@color/tab_sel_text_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightTab"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/rightTabText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/tab_bg_color"
+                android:gravity="center"
+                android:text="REJECTED"
+                android:textColor="@color/tab_text_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/page1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tiled_background_unpub" >
+
+            <ListView
+                android:id="@+id/itemUnPublishedList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#efff"
+                android:dividerHeight="0.8dp"
+                android:listSelector="@drawable/listitem_selector" >
+            </ListView>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/fade_top"
+                android:scaleType="fitXY"
+                android:tint="#118cff" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/fade_bottom"
+                android:scaleType="fitXY"
+                android:tint="#118cff" />
+
+            <TextView
+                android:id="@+id/noUnpubedItemTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="@string/title_no_unpubitem"
+                android:textColor="@color/grey_font"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/page2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tiled_background_rej"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/itemRejectedList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#efff"
+                android:dividerHeight="0.8dp"
+                android:listSelector="@drawable/listitem_selector" >
+            </ListView>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/fade_top"
+                android:scaleType="fitXY"
+                android:tint="#118cff" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/fade_bottom"
+                android:scaleType="fitXY"
+                android:tint="#118cff" />
+
+            <TextView
+                android:id="@+id/noRejectedItemTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="@string/title_no_rejecteditem"
+                android:textColor="@color/grey_font"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/page3"
+			layout="@layout/ebay_auth_note_screen"            
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

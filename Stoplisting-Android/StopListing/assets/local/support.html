@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StopListing Live Support</title>
+
+    <script src="https://cdnva2.purechat.com/app/Scripts/vendor/jquery-2.1.1.min.v-12114168.js"></script>
+    <script src="https://cdnva2.purechat.com/app/VisitorWidget/CompiledWidget/12114168"></script>
+<style>
+    body {
+        margin: 0;
+    }
+    html,body{background: #fff !important;}
+    .purechat-direct-access .direct-container, .purchat-dashboard-preview .direct-container {max-width: unset !important;}
+    .purechat-direct-access h1, .purechat-direct-access p {display:none;}
+    .purechat-displayname {test-transform: capitalize;}
+</style>
+</head>
+
+<body class="purechat-direct-access" style="visibility: hidden;">
+
+<script type="text/javascript">
+
+	var title = 'StopListing Live Support';
+	var intro = 'Enter your information below to continue.';
+	var preview = window.location.search.indexOf("live_preview=1") >= 0;
+	
+	//live_preview param is needed to support embedding in an iframe;
+	if (preview && window.parent && window.parent.currentWidgetSettings) {
+		title = window.parent.currentWidgetSettings.StringResources.title_directAccess;
+		intro = window.parent.currentWidgetSettings.StringResources.intro_directAccess;
+		document.write('<div id="mask" style="z-index: 99999999; position: absolute; top:0px; left: 0px; right: 0px; bottom: 0px;"></div>');
+	}
+</script>
+    <div class="direct-container-header" style="text-align: center;">
+		<h1><script>document.write(title)</script></h1>
+		<p><script>document.write(intro)</script></p>
+        <div class="direct-container"></div>
+	</div>
+<script>
+
+	function NewPcWidget(connectionSettings) {
+
+		var dataController;
+		var dataControllerOptions = {
+			test: false,
+			widgetId: connectionSettings.widgetId || connectionSettings.c,
+			connectionSettings: connectionSettings,
+			isWidget: connectionSettings.isWidget || connectionSettings.f,
+			isOperator: (connectionSettings.d == undefined ? false : connectionSettings.d),
+			pureServerUrl: connectionSettings.pureServerUrl,
+			cdnServerUrl: connectionSettings.cdnServerUrl,
+			renderInto: $('.direct-container'),
+			isDirectAccess: true
+		};
+
+		if (preview && window.parent.currentWidgetSettings) {
+			dataController = new purechatApp.Controllers.DemoDataController(dataControllerOptions);
+		}
+		else {
+			dataController = new purechatApp.Controllers.PCDataController(dataControllerOptions);
+		}
+		var viewOptions = {
+			test: false,
+			isDemo: true,
+			pureServerUrl: connectionSettings.pureServerUrl,
+			cdnServerUrl: connectionSettings.cdnServerUrl,
+			widgetId: connectionSettings.widgetId || connectionSettings.c,
+			isWidget: connectionSettings.isWidget || connectionSettings.f,
+			isOperator: (connectionSettings.d == undefined ? false : connectionSettings.d),
+			renderInto: $('.direct-container'),
+			isDirectAccess: true,
+			dataController: dataController,
+			origin: 'StopListing',
+			IPIsBanned: 'false' == 'true',
+			BrowserDetails: {"Browser":"Stoplisting App WebView","Version":"1.0"}
+			//,
+			//initialState: purechatApp.Constants.WidgetStates.Inactive
+		};
+		var c1 = new purechatApp.Controllers.PureChatController(
+			new purechatApp.Models.WidgetSettings(viewOptions)
+		);
+
+		return c1;
+
+	}
+
+	$(function() {
+		var w = new NewPcWidget({
+			pureServerUrl: 'https://app.purechat.com',
+			cdnServerUrl: 'https://cdnva2.purechat.com/app',
+			c: '6d9a1f2e-04cd-470e-a91b-343bc0453ed2',
+			f: true
+		});
+
+		w.on('widget:ready', function() {
+			var chatModel = w.getChatModel();
+
+			w.widgetLayout.expand(true);
+		});
+	});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light" />
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme" />
+
+    <!-- Login Screen -->
+    <style name="btn" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:minWidth">10.0dip</item>
+        <item name="android:minHeight">10.0dip</item>
+    </style>
+
+    <style name="editext_normal" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:ems">10</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:inputType">textEmailAddress</item>
+    </style>
+
+    <style name="CustomTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <!--  -->
+    <style name="RadioButton">
+        <item name="android:textColor">@drawable/radio_button_text_color</item>
+        <item name="android:minHeight">33dp</item>
+        <item name="android:minWidth">70dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+    
+     <style name="popup">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="@android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+    
+</resources>

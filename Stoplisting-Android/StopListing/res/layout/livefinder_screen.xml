@@ -1,0 +1,186 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/camera_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           	android:background="#333"
+           	android:paddingLeft="1dp"
+           	android:paddingRight="1dp"
+           	android:paddingTop="1dp"
+           	android:paddingBottom="1dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/authBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn1_selector"
+                android:text="@string/title_link_dropbox"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/linkDropBoxTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:text="No Link with Dropbox."
+                android:textColor="@color/grey_font"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/logged_in_display"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@+id/camera_preview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="#ffffffff" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#88ffffff" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4dp"
+                    android:background="@color/light_green2" />
+
+                <FrameLayout
+                    android:id="@+id/bottomBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/tiled_background" >
+
+                    <!-- android:background="@drawable/custom_menu_but" -->
+
+                    <Button
+                        android:id="@+id/backBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_marginRight="10dp"
+                        android:background="#0fff"
+                        android:minHeight="20dp"
+                        android:minWidth="20dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/icon_back"
+                        android:textColor="#ffffff"
+                        android:textSize="26sp" />
+
+                    <Button
+                        android:id="@+id/cameraBtn"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/but4_selector"
+                        android:text="@string/icon_camera"
+                        android:textColor="#fff"
+                        android:textSize="28sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/preview_display"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tiled_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/logo_circle_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="LiveFinder"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--
+        <com.listingproduct.stoplisting.TouchImageView
+            android:id="@+id/previewIv"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.1"
+            android:scaleType="fitXY" >
+        </com.listingproduct.stoplisting.TouchImageView> 
+        -->
+
+        <ImageView
+            android:id="@+id/previewIv"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.1"
+            android:scaleType="fitXY" >
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <Button
+                android:id="@+id/detailsBtn"
+                android:layout_width="0dip"
+                android:layout_height="36dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/btn1_selector"
+                android:text="Cancel"
+                android:textColor="@color/light_font"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="0dip"
+                android:layout_height="36dp"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/btn1_selector"
+                android:text="Upload"
+                android:textColor="@color/light_font"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,74 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="layout_background">#FFFFFF</color>
+    
+    <color name="light_font">#FBFBFB</color>
+    <color name="grey_font">#ff9e9e9e</color>
+    <color name="grey_dark_font">#ff454545</color>
+    <color name="dark_font">#000000</color>
+    
+    <color name="text_shadow">#7F000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
+    <color name="text_disable_grey">#999999</color>
+    <color name="text_arrow">#AAFFFFFF</color>
+   
+	<color name="transparent">#00000000</color>
+	<color name="black">#000000</color>
+	<color name="white">#FFFFFF</color>
+	
+	<color name="listitem_divider_color">#383838</color>
+	<color name="listitem_divider_color2">#c4c4c4</color>
+	
+	<color name="bg_title_start_color">#7dae01</color>
+	<color name="bg_title_end_color">#6f9a02</color>
+	
+	<color name="tab_bg_color">#e2e2e2</color>	
+	<color name="tab_sel_bg_color">#000000</color>
+	
+	<color name="tab_text_color">#909090</color>	
+	<color name="tab_sel_text_color">#ffffff</color>
+	
+	<color name="listitem_itemtitle_color">#a1a1a1</color>
+	<color name="listitem_itemcontent_color">#737373</color>
+	<color name="listitem_title_color">#6bb000</color>
+
+	<!-- Gradient Button -->	
+	<color name="btn1_color">#7dad02</color>
+	<color name="btn1_sel_color">#437400</color>
+	
+	<color name="btn1_color_end">#597c00</color>
+	<color name="btn1_sel_color_end">#284500</color>
+	
+	<color name="btn2_color">#3496e5</color>
+	<color name="btn2_sel_color">#0463b0</color>
+	
+	<color name="btn2_color_end">#026fc8</color>
+	<color name="btn2_sel_color_end">#035393</color>
+	
+	
+	
+	<color name="btn_stats_color">#ffffff</color>
+	<color name="btn_stats_sel_color">#ddeedd</color>
+	
+	<color name="grey_btn_color">#d8d8d8</color>
+	<color name="grey_btn_sel_color">#a0a0a0</color>
+	
+	<!-- for published and unpublished item -->
+	<color name="light_red">#ff6600</color>
+	<color name="light_red1">#b00022</color>
+	<color name="light_green">#a4c739</color>
+	<color name="light_green1">#7eae02</color>
+	<color name="light_green2">#a5e53c</color>
+	
+	
+	<color name="radiogroup_color">#4a4a4a</color>
+	
+	<color name="navbtn_color_end">#242424</color>
+	<color name="navbtn_color_start">#3a3a3a</color>
+	<color name="navbtn_sel_color_end">#141414</color>
+	<color name="navbtn_sel_color_start">#2a2a2a</color>
+	
+	<!-- For User defined segment control -->
+	<color name="radio_button_selected_color">#ff33b5e5</color> 
+  	<color name="radio_button_unselected_color">@android:color/transparent</color> 
+
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".CustomGalleryActivity" >
+
+    <FrameLayout
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tiled_background" >
+		
+        <LinearLayout
+            android:id="@+id/titleLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/logo_circle" />
+
+            <TextView
+                android:id="@+id/imgCntTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Set Photo Count : "
+                android:textColor="#fff"
+                android:textSize="18sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/imgCntTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/light_green"
+                android:textSize="18sp"
+                android:textStyle="bold" >
+            </TextView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#eee" >
+
+        <GridView
+            android:id="@+id/gridGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="-10dp"
+            android:layout_marginTop="-10dp"
+            android:horizontalSpacing="-15dp"
+            android:listSelector="#00000000"
+            android:numColumns="3"
+            android:padding="0dp"
+            android:verticalSpacing="-15dp"
+            tools:listitem="@layout/gallery_item" >
+        </GridView>
+
+        <ImageView
+            android:id="@+id/imgSinglePick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/no_media" />
+    </ViewSwitcher>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:background="@color/light_green2" />
+
+    <FrameLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tiled_background"
+        android:orientation="horizontal" >
+		
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/but4_selector"
+            android:text="@string/icon_close"
+            android:textColor="#fff"
+            android:textSize="28sp" />
+        
+        <!-- android:background="@drawable/custom_menu_but" -->
+        <Button
+            android:id="@+id/galleryBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/but4_selector"
+            android:text="@string/icon_picture"
+            android:textColor="#fff"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/uploadBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/but4_selector"
+            android:text="@string/icon_listing"
+            android:textColor="#fff"
+            android:textSize="28sp" />
+    </FrameLayout>
+
+</LinearLayout>
